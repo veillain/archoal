@@ -1,0 +1,77 @@
+/* ---- Main Bar Style ---- */
+
+* {
+	font-family: 'Cozette';
+	font-size: 14px;
+}
+
+window#waybar {
+	background: #151515;
+}
+
+#top {
+	background: #151515;
+	padding: 10 0;
+}
+
+#custom-user {
+	background: rgba(255, 255, 255, 0.2);
+	padding: 2 0;
+	margin: 0 40;
+	border-radius: 3;
+}
+
+#custom-username {
+	font-family: 'Aestera';
+	font-size: 32;
+	padding: 10 0 3 0;
+}
+#custom-hostname {
+	color: rgba(255, 255, 255, 0.2);
+	margin: -5 0 10 0;
+}
+#custom-kiri {
+	background: rgba(255, 255, 255, 0.2);
+	padding: 1 8;
+	margin: 0 6 0 40;
+	border-radius: 3;
+}
+#custom-tengah {
+	background: rgba(255, 255, 255, 0.2);
+	padding: 1 8;
+	margin: 0 6;
+	border-radius: 3;
+}
+#custom-kanan {
+	background: rgba(255, 255, 255, 0.2);
+	padding: 1 8;
+	margin: 0 6;
+	border-radius: 3;
+}
+
+
+
+
+#mid {
+	padding: 50 0;
+}
+
+#custom-home,
+#custom-terminal,
+#custom-chrome,
+#custom-edit,
+#custom-file {
+	background: #151515;
+	margin: 5 55;
+	border-radius: 3;
+	padding: 8 0;
+}
+
+#custom-home:hover,
+#custom-terminal:hover,
+#custom-chrome:hover,
+#custom-edit:hover,
+#custom-file:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s linear
+}

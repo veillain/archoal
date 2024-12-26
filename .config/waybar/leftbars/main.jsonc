@@ -1,0 +1,156 @@
+{
+	// -- Position --
+	"layer": "top",
+	"position": "left",
+	"height":	768,
+	"width":	200,
+	"spacing":	0,
+
+	// -- Modules List --
+	"modules-center": [
+		"group/top",
+		"group/mid",
+		"group/bot"
+	],
+
+
+
+	// -- Group conf --
+	"group/top": {
+		"orientation": "vertical",
+		"modules": [
+			"custom/user",
+			"custom/username",
+			"custom/hostname",
+			"group/top2"
+			
+		]
+	},
+
+	"group/top2": {
+		"orientation": "horizontal",
+		"modules": [
+			"custom/kiri",
+			"custom/tengah",
+			"custom/kanan"
+		]
+	},
+
+	"group/mid": {
+		"orientation": "vertical",
+		"modules": [
+			"custom/home",
+			"custom/terminal",
+			"custom/chrome",
+			"custom/edit",
+			"custom/file"
+		]
+	},
+
+	"group/bot": {
+		"orientation": "vertical",
+		"modules": [
+			"clock",
+			"custom/power"
+		]
+	},
+
+
+
+	// -- Modules Conf --
+	"custom/user": {
+		"format": "{}",
+		"tooltip": false,
+		"interval": 1,
+		"return-type": "bash",
+		"exec": "bash $HOME/.config/waybar/leftbar/setup.sh greeting"
+	},
+
+	"custom/username": {
+		"format": "{}",
+		"max-length": 10,
+		"tooltip": false,
+		"interval": 1,
+		"return-type": "bash",
+		"exec": "bash $HOME/.config/waybar/leftbar/setup.sh title"
+	},
+
+	"custom/hostname": {
+		"format": "{}",
+		"tooltip": false,
+		"interval": 1,
+		"return-type": "bash",
+		"exec": "bash $HOME/.config/waybar/leftbar/setup.sh artist"
+	},
+
+	"custom/kiri": {
+		"format": "{}",
+		"tooltip": false,
+		"interval": 1,
+		"return-type": "bash",
+		"exec": "bash $HOME/.config/waybar/leftbar/setup.sh kiri",
+    "on-click": "playerctl previous"
+	},
+	"custom/tengah": {
+		"format": "{}",
+		"tooltip": false,
+		"interval": 1,
+		"return-type": "bash",
+		"exec": "bash $HOME/.config/waybar/leftbar/setup.sh tengah",
+		"on-click": "playerctl play-pause"
+	},
+	"custom/kanan": {
+		"format": "{}",
+		"tooltip": false,
+		"interval": 1,
+		"return-type": "bash",
+		"exec": "bash $HOME/.config/waybar/leftbar/setup.sh kanan",
+    "on-click": "playerctl next"
+	},
+
+
+
+
+	
+
+	"custom/home": {
+		"format": "   Apps",
+		"tooltip": false,
+    "on-click": "rofi -show drun"
+	},
+
+	"custom/terminal": {
+		"format": "   Term",
+		"tooltip": false,
+    "on-click": "foot"
+	},
+
+	"custom/chrome": {
+		"format": "   Brws",
+		"tooltip": false,
+    "on-click": "google-chrome-unstable"
+	},
+
+	"custom/edit": {
+		"format": "   Edit",
+		"tooltip": false,
+    "on-click": "nvim"
+	},
+
+	"custom/file": {
+		"format": "   File",
+		"tooltip": false,
+    "on-click": "pcmanfm"
+	},
+
+	"clock": {
+		"format": "{:%H : %M}",
+		"tooltip": false
+	},
+
+	"custom/power": {
+		"format": " ⏻ ",
+		"tooltip": false
+	},
+	
+}

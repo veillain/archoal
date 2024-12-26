@@ -1,0 +1,55 @@
+{
+	"exclusive": false,
+	"layer": "top",
+	"passthrough": true,
+	"position": "left",
+	"width": 1078,
+	"height": 5,
+	"margin-left": -590,
+
+	//"modules-left": [
+	//	"hyprland/workspaces"
+	//],
+	"modules-center": [
+		"group/corner"
+	],
+
+	"group/corner": {
+		"orientation": "vertical",
+		"modules": [
+			"group/corners"
+		]
+	},
+
+	"group/corners": {
+		"orientation": "horizontal",
+		"modules": [
+			"hyprland/workspaces",
+			"custom/corners"
+		]
+	},
+
+	"custom/corners": {
+		"format": "O",
+		"tooltip": false
+	},
+
+	"hyprland/workspaces": {
+	    "disable-scroll": true,
+	    "all-outputs": true,
+	    "warp-on-scroll": false,
+	    "format": "{icon}",
+	    "format-icons": {
+	        "1": "tu",
+	        "2": "wa",
+	        "3": "ga",
+	        "4": "pa",
+	        "5": "ma",
+	        "6": "na",
+	        "7": "ju",
+	        "8": "pa",
+	        "9": "la",
+	        "10": "lu"
+	    }
+	}
+}

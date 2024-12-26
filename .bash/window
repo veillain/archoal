@@ -1,0 +1,14 @@
+#!/bin/bash
+
+state="$(hyprctl -j clients)"
+active_window="$(hyprctl -j activewindow)"
+
+current_addr="$(echo "$active_window" | gojq -r '.address')"
+
+window="$(echo "$state" |
+    gojq -r '.[] | select(.monitor != -1 ) | "\(.address)    \(.workspace.name)    \(.title)"' |
+    sed "s|$current_addr|focused ->|" |
+    sort -r |
+    tofi --fuzzy-match true)"
+
+

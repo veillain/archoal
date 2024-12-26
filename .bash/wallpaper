@@ -1,0 +1,5 @@
+#!/bin/bash
+effects=("grow" "wave" "any" "fade")
+random_index=$(( RANDOM % ${#effects[@]} )) 
+img=$(sxiv -to ~/Wallpaper/backup/ | awk -F'/' '{print $NF}')
+swww img -t ${effects[random_index]} ~/Wallpaper/backup/$img
